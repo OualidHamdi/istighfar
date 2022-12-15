@@ -19,6 +19,13 @@
 	<meta name="msapplication-TileColor" content="#00a8ff">
 	<meta name="msapplication-config" content="img/favicons/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
+
+	    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/stylePlaylist.css">
+	<!-- Demo CSS (No need to include it into your project) -->
+	<link rel="stylesheet" href="css/demo.css">
+
+
 	<!-- Normalize -->
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<!-- Bootstrap -->
@@ -33,6 +40,8 @@
 	<link rel="stylesheet" type="text/css" href="fonts/eleganticons/et-icons.css">
 	<!-- Main style -->
 	<link rel="stylesheet" type="text/css" href="css/cardio.css">
+
+
 </head>
 
 <body>
@@ -65,8 +74,10 @@
 		</div>
 
 	</nav> -->
+
 	<header id="intro">
 		<div class="container">
+
 			<div class="table">
 				<div class="header-text">
 					<div class="row">
@@ -74,12 +85,25 @@
 							<h3 class="light white">استغفارات يومية</h3>
 							<h1 class="white typed">استغفارات يومية وتسابيح وأذكار مكتوبة دواء للقلوب وشفاء للصدور</h1>
 							<span class="typed-cursor">|</span>
+							 <div class="simple-audio-player" id="simp" data-config='{"shide_top":false,"shide_btm":false,"auto_load":false}'>
+  <div class="simp-playlist">
+    <ul>
+      <li><span class="simp-source" data-src="media/audio1.mp3">لا إله إلا أنت سبحانك إني كنت من الظالمين</span><span class="simp-desc">Bader Alnufais</span></li>
+      <li><span class="simp-source" data-src="media/audio2.mp3">لا حول ولا قوة الا بالله
+</span><span class="simp-desc">Bader Alnufais</span></li>
+        <li><span class="simp-source" data-src="media/audio3.mp3">اللهم صّلِ وسَلّمْ عَلۓِ نَبِيْنَامُحَمد
+</span><span class="simp-desc">Bader Alnufais</span></li>
+    </ul>
+  </div>
+</div>    
+
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</header>
+
 	<section>
 		<div class="cut cut-top"></div>
 		<div class="container">
@@ -89,13 +113,8 @@
 						<h5 class="white heading hide-hover">مرة  <label>100</label> </h5>
 						<div class="bottom">
 							<h4 class="white heading small-pt">لا إله إلا أنت سبحانك إني كنت من الظالمين</h4>
-							<audio id="audio1">
-								<source src="media/audio1.mp3" type="audio/mpeg">
-							</audio>
-							<a onclick="audioNumbre1();" id="playPauseBtn1" class="btn btn-white-fill expand" style="font-family: arial">&#9658;</a> 
 							<a onclick="cmpNumbre1();" class="btn btn-white-fill expand">سبّح</a> 
 						</div><label class="expand" style="color: white;float: right;padding-top: 30px;">مرة  <label id="numbre1">0 </label> </label>
-						 <div class="hp_range1 "></div>	
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -103,29 +122,17 @@
 						<h5 class="white heading hide-hover">مرة  <label>100</label> </h5>
 						<div class="bottom">
 							<h4 class="white heading small-pt">لا حول ولا قوة الا بالله</h4>
-								
-							<a onclick="audioNumbre2();" id="playPauseBtn2" class="btn btn-white-fill expand" style="font-family: arial">&#9658;</a> 
 							<a onclick="cmpNumbre2();" class="btn btn-white-fill expand">سبّح</a> 
 						</div><label class="expand" style="color: white;float: right;padding-top: 30px;">مرة  <label id="numbre2">0 </label> </label>
-						 <div class="hp_range2 "></div>	
 					</div>
-					<audio id="audio2">
-								<source src="media/audio2.mp3" type="audio/mpeg">
-							</audio>
 				</div>
 				 <div class="col-md-4">
 					<div class="intro-table intro_table_hover">
 						<h5 class="white heading hide-hover">مرة  <label>100</label> </h5>
 						<div class="bottom">
 							<h4 class="white heading small-pt">اللهم صّلِ وسَلّمْ عَلۓِ نَبِيْنَامُحَمد </h4>
-
-								<audio id="audio3" >
-								<source src="media/audio3.mp3" type="audio/mpeg">
-							</audio>
-							<a onclick="audioNumbre3();" id="playPauseBtn3" class="btn btn-white-fill expand" style="font-family: arial">&#9658;</a> 
 							<a onclick="cmpNumbre3();" class="btn btn-white-fill expand">سبّح</a> 
 						</div><label class="expand" style="color: white;float: right;padding-top: 30px;">مرة  <label id="numbre3">0 </label> </label>
-										 <div class="hp_range3 "></div>	
 					</div>
 				
   				  
@@ -135,8 +142,14 @@
 			</div>
 
 
+
 		</div>
+
+
 	</section>
+
+
+
 
 	<!-- <section id="services" class="section section-padded">
 		<div class="container">
@@ -429,76 +442,12 @@
 			}
 
 
-			    let audio1 = document.getElementById('audio1');
-				let playPauseBtn1 = document.getElementById('playPauseBtn1');
-				let countaudioNumbre1 = 0;
-				let audio2 = document.getElementById('audio2');
-				let playPauseBtn2 = document.getElementById('playPauseBtn2');
-				let countaudioNumbre2 = 0;
-				let audio3 = document.getElementById('audio3');
-				let playPauseBtn3 = document.getElementById('playPauseBtn3');
-				let countaudioNumbre3 = 0;
-
-			function audioNumbre1(){
-					if(countaudioNumbre1==0){
-						countaudioNumbre1 =1;
-						audio1.play();
-						playPauseBtn1.innerHTML="&#9208;";
-					}else{
-						countaudioNumbre1 =0;
-						audio1.pause();
-						playPauseBtn1.innerHTML="&#9658;";
-					}
-				
-			}
-				function audioNumbre2(){
-					if(countaudioNumbre2==0){
-						countaudioNumbre2 =1;
-						audio2.play();
-						playPauseBtn2.innerHTML="&#9208;";
-					}else{
-						countaudioNumbre2 =0;
-						audio2.pause();
-						playPauseBtn2.innerHTML="&#9658;";
-					}
-				
-			}
-
-				function audioNumbre3(){
-					if(countaudioNumbre3==0){
-						countaudioNumbre3 =1;
-						audio3.play();
-						playPauseBtn3.innerHTML="&#9208;";
-					}else{
-						countaudioNumbre3 =0;
-						audio3.pause();
-						playPauseBtn3.innerHTML="&#9658;";
-					}
-				
-			}
-
-			audio1.addEventListener("timeupdate", function() {
-    var currentTime = audio1.currentTime;
-    var duration = audio3.duration;
-    $('.hp_range1').stop(true,true).animate({'width':(currentTime +.25)/duration*97+'%'},250,'linear');
-
-});
-			audio2.addEventListener("timeupdate", function() {
-    var currentTime = audio2.currentTime;
-    var duration = audio3.duration;
-    $('.hp_range2').stop(true,true).animate({'width':(currentTime +.25)/duration*97+'%'},250,'linear');
-    
-});
-						audio3.addEventListener("timeupdate", function() {
-    var currentTime = audio3.currentTime;
-    var duration = audio3.duration;
-    $('.hp_range3').stop(true,true).animate({'width':(currentTime +.25)/duration*97+'%'},250,'linear');
-    
-});
 
 
 
 
 
 		</script>
+
+		<script  src="./js/script.js"></script>
 </html>
