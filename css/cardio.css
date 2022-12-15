@@ -1114,17 +1114,11 @@ footer .social-footer li:hover a {
 
 
 
-.hp_slide{
-    width:100%;
-    background:white;
-    height:25px;
 
-}
-.hp_range{
+.hp_range1,.hp_range2,.hp_range3{
+	position: absolute;
+	bottom: 0;
     width:0;
     background:green;
-    height:25px;
-
+    height:15px;
 }
-
-

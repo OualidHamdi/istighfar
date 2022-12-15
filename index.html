@@ -95,6 +95,7 @@
 							<a onclick="audioNumbre1();" id="playPauseBtn1" class="btn btn-white-fill expand" style="font-family: arial">&#9658;</a> 
 							<a onclick="cmpNumbre1();" class="btn btn-white-fill expand">سبّح</a> 
 						</div><label class="expand" style="color: white;float: right;padding-top: 30px;">مرة  <label id="numbre1">0 </label> </label>
+						 <div class="hp_range1 "></div>	
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -106,6 +107,7 @@
 							<a onclick="audioNumbre2();" id="playPauseBtn2" class="btn btn-white-fill expand" style="font-family: arial">&#9658;</a> 
 							<a onclick="cmpNumbre2();" class="btn btn-white-fill expand">سبّح</a> 
 						</div><label class="expand" style="color: white;float: right;padding-top: 30px;">مرة  <label id="numbre2">0 </label> </label>
+						 <div class="hp_range2 "></div>	
 					</div>
 					<audio id="audio2">
 								<source src="media/audio2.mp3" type="audio/mpeg">
@@ -123,16 +125,16 @@
 							<a onclick="audioNumbre3();" id="playPauseBtn3" class="btn btn-white-fill expand" style="font-family: arial">&#9658;</a> 
 							<a onclick="cmpNumbre3();" class="btn btn-white-fill expand">سبّح</a> 
 						</div><label class="expand" style="color: white;float: right;padding-top: 30px;">مرة  <label id="numbre3">0 </label> </label>
-									
+										 <div class="hp_range3 "></div>	
 					</div>
-							
+				
+  				  
+				</div>	
 				</div>
 
 			</div>
 
-<div class="hp_slide">
-     <div class="hp_range"></div>
-</div>
+
 		</div>
 	</section>
 
@@ -475,12 +477,24 @@
 				
 			}
 
-			audio3.addEventListener("timeupdate", function() {
+			audio1.addEventListener("timeupdate", function() {
+    var currentTime = audio1.currentTime;
+    var duration = audio3.duration;
+    $('.hp_range1').stop(true,true).animate({'width':(currentTime +.25)/duration*97+'%'},250,'linear');
+
+});
+			audio2.addEventListener("timeupdate", function() {
+    var currentTime = audio2.currentTime;
+    var duration = audio3.duration;
+    $('.hp_range2').stop(true,true).animate({'width':(currentTime +.25)/duration*97+'%'},250,'linear');
+    
+});
+						audio3.addEventListener("timeupdate", function() {
     var currentTime = audio3.currentTime;
     var duration = audio3.duration;
-    $('.hp_range').stop(true,true).animate({'width':(currentTime +.25)/duration*100+'%'},250,'linear');
+    $('.hp_range3').stop(true,true).animate({'width':(currentTime +.25)/duration*97+'%'},250,'linear');
+    
 });
-
 
 
 
