@@ -93,6 +93,8 @@
 </span><span class="simp-desc">Bader Alnufais</span></li>
         <li><span class="simp-source" data-src="media/audio3.mp3">اللهم صّلِ وسَلّمْ عَلۓِ نَبِيْنَامُحَمد
 </span><span class="simp-desc">Bader Alnufais</span></li>
+ <li><span class="simp-source" data-src="media/audio4.mp3">سبحان الله وبحمده سبحان الله العظيم</span><span class="simp-desc">Bader Alnufais</span></li>
+  <li><span class="simp-source" data-src="media/audio5.mp3">سبحان الله والحمد لله ولا اله الا الله والله اكبر</span><span class="simp-desc">Amer Ataya</span></li>
     </ul>
   </div>
 </div>    
@@ -107,7 +109,7 @@
 	<section>
 		<div class="cut cut-top"></div>
 		<div class="container">
-			<div class="row intro-tables">
+			<div class="row intro-tables" style="margin-top: 30px;">
 				<div class="col-md-4">
 					<div class="intro-table intro_table_hover">
 						<h5 class="white heading hide-hover">مرة  <label>100</label> </h5>
@@ -120,7 +122,7 @@
 				<div class="col-md-4">
 					<div class="intro-table intro_table_hover">
 						<h5 class="white heading hide-hover">مرة  <label>100</label> </h5>
-						<div class="bottom">
+						<div class="bottom" style="left: 48px;">
 							<h4 class="white heading small-pt">لا حول ولا قوة الا بالله</h4>
 							<a onclick="cmpNumbre2();" class="btn btn-white-fill expand">سبّح</a> 
 						</div><label class="expand" style="color: white;float: right;padding-top: 30px;">مرة  <label id="numbre2">0 </label> </label>
@@ -133,12 +135,28 @@
 							<h4 class="white heading small-pt">اللهم صّلِ وسَلّمْ عَلۓِ نَبِيْنَامُحَمد </h4>
 							<a onclick="cmpNumbre3();" class="btn btn-white-fill expand">سبّح</a> 
 						</div><label class="expand" style="color: white;float: right;padding-top: 30px;">مرة  <label id="numbre3">0 </label> </label>
-					</div>
-				
-  				  
+					</div>  
 				</div>	
-				</div>
+				 <div class="col-md-4">
+					<div class="intro-table intro_table_hover">
+						<h5 class="white heading hide-hover">مرة  <label>100</label> </h5>
+						<div class="bottom">
+							<h4 class="white heading small-pt">سبحان الله وبحمده سبحان الله العظيم</h4>
+							<a onclick="cmpNumbre4();" class="btn btn-white-fill expand">سبّح</a> 
+						</div><label class="expand" style="color: white;float: right;padding-top: 30px;">مرة  <label id="numbre4">0 </label> </label>
+					</div>  
+				</div>	
+				 <div class="col-md-4">
+					<div class="intro-table intro_table_hover">
+						<h5 class="white heading hide-hover">مرة  <label>100</label> </h5>
+						<div class="bottom">
+							<h4 class="white heading small-pt">سبحان الله والحمد لله ولا اله الا الله والله اكبر</h4>
+							<a onclick="cmpNumbre5();" class="btn btn-white-fill expand">سبّح</a> 
+						</div><label class="expand" style="color: white;float: right;padding-top: 30px;">مرة  <label id="numbre5">0 </label> </label>
+					</div>  
+				</div>	
 
+				</div>
 			</div>
 
 
@@ -440,7 +458,25 @@
 					ele[2].style.backgroundImage="url('img/table-2S.jpg')";
 					}
 			}
-
+				function cmpNumbre4(){
+					let element = document.getElementById('numbre4');
+					let value = element.innerHTML;	
+					++value;	
+					document.getElementById('numbre4').innerHTML=value;
+					if (value>= 100){
+					let ele = document.getElementsByClassName("intro_table_hover");
+					ele[3].style.backgroundImage="url('img/table-2S.jpg')";
+					}
+			}function cmpNumbre5(){
+					let element = document.getElementById('numbre5');
+					let value = element.innerHTML;	
+					++value;	
+					document.getElementById('numbre5').innerHTML=value;
+					if (value>= 100){
+					let ele = document.getElementsByClassName("intro_table_hover");
+					ele[4].style.backgroundImage="url('img/table-2S.jpg')";
+					}
+			}
 
 
 

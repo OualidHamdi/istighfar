@@ -397,6 +397,9 @@ section {
 .intro-tables .intro-table .bottom {
 	position: absolute;
 	bottom: 0;
+	padding-right: 31px;
+	text-align: center;
+
 }
 
 .intro-tables .intro-table .owl-schedule .schedule-row {
