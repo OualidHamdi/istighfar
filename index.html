@@ -96,6 +96,7 @@
  <li><span class="simp-source" data-src="media/audio4.mp3">سبحان الله وبحمده سبحان الله العظيم</span><span class="simp-desc">Bader Alnufais</span></li>
   <li><span class="simp-source" data-src="media/audio5.mp3">سبحان الله والحمد لله ولا اله الا الله والله اكبر</span><span class="simp-desc">Amer Ataya</span></li>
     <li><span class="simp-source" data-src="media/audio6.mp3">اللهم انك عفو تحب العفو فاعف عنا</span><span class="simp-desc">Bader Alnufais</span></li>
+     <li><span class="simp-source" data-src="media/audio7.mp3">استغفر الله واتوب اليه</span><span class="simp-desc">Bader Alnufais</span></li>
     </ul>
   </div>
 </div>    
@@ -163,6 +164,15 @@
 							<h4 class="white heading small-pt">اللهم انك عفو تحب العفو فاعف عنا</h4>
 							<a onclick="cmpNumbre6();" class="btn btn-white-fill expand">سبّح</a> 
 						</div><label class="expand" style="color: white;float: right;padding-top: 30px;"><label class="Marra">مرة</label>  <label id="numbre6">0 </label> </label>
+					</div>  
+				</div>
+								 <div class="col-md-4">
+					<div class="intro-table intro_table_hover">
+						<h5 class="white heading hide-hover">مرة  <label>100</label> </h5>
+						<div class="bottom" style="left: 48px;">
+							<h4 class="white heading small-pt">استغفر الله واتوب اليه</h4>
+							<a onclick="cmpNumbre7();" class="btn btn-white-fill expand">سبّح</a> 
+						</div><label class="expand" style="color: white;float: right;padding-top: 30px;"><label class="Marra">مرة</label>  <label id="numbre7">0 </label> </label>
 					</div>  
 				</div>
 				</div>
@@ -524,7 +534,22 @@
 					}else{
 						document.getElementsByClassName('Marra')[5].innerHTML="مرة ";
 					}
+			}function cmpNumbre7(){
+					let element = document.getElementById('numbre7');
+					let value = element.innerHTML;	
+					++value;	
+					document.getElementById('numbre7').innerHTML=value;
+					if (value>= 100){
+					let ele = document.getElementsByClassName("intro_table_hover");
+					ele[6].style.backgroundImage="url('img/table-2S.jpg')";
+					}
+					if (value>=2 && value<=10){
+						document.getElementsByClassName('Marra')[6].innerHTML="مرات";
+					}else{
+						document.getElementsByClassName('Marra')[6].innerHTML="مرة ";
+					}
 			}
+
 
 
 
