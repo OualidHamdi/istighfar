@@ -95,10 +95,11 @@
 </span><span class="simp-desc">Bader Alnufais</span></li>
  <li><span class="simp-source" data-src="media/audio4.mp3">سبحان الله وبحمده سبحان الله العظيم</span><span class="simp-desc">Bader Alnufais</span></li>
   <li><span class="simp-source" data-src="media/audio5.mp3">سبحان الله والحمد لله ولا اله الا الله والله اكبر</span><span class="simp-desc">Amer Ataya</span></li>
+    <li><span class="simp-source" data-src="media/audio6.mp3">اللهم انك عفو تحب العفو فاعف عنا</span><span class="simp-desc">Bader Alnufais</span></li>
     </ul>
   </div>
 </div>    
-
+<br><br><br>
 						</div>
 					</div>
 				</div>
@@ -116,7 +117,7 @@
 						<div class="bottom">
 							<h4 class="white heading small-pt">لا إله إلا أنت سبحانك إني كنت من الظالمين</h4>
 							<a onclick="cmpNumbre1();" class="btn btn-white-fill expand">سبّح</a> 
-						</div><label class="expand" style="color: white;float: right;padding-top: 30px;">مرة  <label id="numbre1">0 </label> </label>
+						</div><label class="expand" style="color: white;float: right;padding-top: 30px;"><label class="Marra">مرة</label>  <label id="numbre1">0 </label> </label>
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -125,7 +126,7 @@
 						<div class="bottom" style="left: 48px;">
 							<h4 class="white heading small-pt">لا حول ولا قوة الا بالله</h4>
 							<a onclick="cmpNumbre2();" class="btn btn-white-fill expand">سبّح</a> 
-						</div><label class="expand" style="color: white;float: right;padding-top: 30px;">مرة  <label id="numbre2">0 </label> </label>
+						</div><label class="expand" style="color: white;float: right;padding-top: 30px;"><label class="Marra">مرة</label>  <label id="numbre2">0 </label> </label>
 					</div>
 				</div>
 				 <div class="col-md-4">
@@ -134,7 +135,7 @@
 						<div class="bottom">
 							<h4 class="white heading small-pt">اللهم صّلِ وسَلّمْ عَلۓِ نَبِيْنَامُحَمد </h4>
 							<a onclick="cmpNumbre3();" class="btn btn-white-fill expand">سبّح</a> 
-						</div><label class="expand" style="color: white;float: right;padding-top: 30px;">مرة  <label id="numbre3">0 </label> </label>
+						</div><label class="expand" style="color: white;float: right;padding-top: 30px;"><label class="Marra">مرة</label>  <label id="numbre3">0 </label> </label>
 					</div>  
 				</div>	
 				 <div class="col-md-4">
@@ -143,7 +144,7 @@
 						<div class="bottom">
 							<h4 class="white heading small-pt">سبحان الله وبحمده سبحان الله العظيم</h4>
 							<a onclick="cmpNumbre4();" class="btn btn-white-fill expand">سبّح</a> 
-						</div><label class="expand" style="color: white;float: right;padding-top: 30px;">مرة  <label id="numbre4">0 </label> </label>
+						</div><label class="expand " style="color: white;float: right;padding-top: 30px;"><label class="Marra">مرة</label>  <label id="numbre4">0 </label> </label>
 					</div>  
 				</div>	
 				 <div class="col-md-4">
@@ -152,10 +153,18 @@
 						<div class="bottom">
 							<h4 class="white heading small-pt">سبحان الله والحمد لله ولا اله الا الله والله اكبر</h4>
 							<a onclick="cmpNumbre5();" class="btn btn-white-fill expand">سبّح</a> 
-						</div><label class="expand" style="color: white;float: right;padding-top: 30px;">مرة  <label id="numbre5">0 </label> </label>
+						</div><label class="expand" style="color: white;float: right;padding-top: 30px;"><label class="Marra">مرة</label>  <label id="numbre5">0 </label> </label>
 					</div>  
 				</div>	
-
+					 <div class="col-md-4">
+					<div class="intro-table intro_table_hover">
+						<h5 class="white heading hide-hover">مرة  <label>100</label> </h5>
+						<div class="bottom">
+							<h4 class="white heading small-pt">اللهم انك عفو تحب العفو فاعف عنا</h4>
+							<a onclick="cmpNumbre6();" class="btn btn-white-fill expand">سبّح</a> 
+						</div><label class="expand" style="color: white;float: right;padding-top: 30px;"><label class="Marra">مرة</label>  <label id="numbre6">0 </label> </label>
+					</div>  
+				</div>
 				</div>
 			</div>
 
@@ -437,6 +446,11 @@
 					let ele = document.getElementsByClassName("intro_table_hover");
 					ele[0].style.backgroundImage="url('img/table-2S.jpg')";
 					}
+					if (value>=2 && value<=10){
+						document.getElementsByClassName('Marra')[0].innerHTML="مرات";
+					}else{
+						document.getElementsByClassName('Marra')[0].innerHTML="مرة ";
+					}
 			}
 			function cmpNumbre2(){
 					let element = document.getElementById('numbre2');
@@ -446,6 +460,11 @@
 					if (value>= 100){
 					let ele = document.getElementsByClassName("intro_table_hover");
 					ele[1].style.backgroundImage="url('img/table-2S.jpg')";
+					}
+					if (value>=2 && value<=10){
+						document.getElementsByClassName('Marra')[1].innerHTML="مرات";
+					}else{
+						document.getElementsByClassName('Marra')[1].innerHTML="مرة ";
 					}
 			}
 			function cmpNumbre3(){
@@ -457,6 +476,11 @@
 					let ele = document.getElementsByClassName("intro_table_hover");
 					ele[2].style.backgroundImage="url('img/table-2S.jpg')";
 					}
+					if (value>=2 && value<=10){
+						document.getElementsByClassName('Marra')[2].innerHTML="مرات";
+					}else{
+						document.getElementsByClassName('Marra')[2].innerHTML="مرة ";
+					}
 			}
 				function cmpNumbre4(){
 					let element = document.getElementById('numbre4');
@@ -467,6 +491,11 @@
 					let ele = document.getElementsByClassName("intro_table_hover");
 					ele[3].style.backgroundImage="url('img/table-2S.jpg')";
 					}
+					if (value>=2 && value<=10){
+						document.getElementsByClassName('Marra')[3].innerHTML="مرات";
+					}else{
+						document.getElementsByClassName('Marra')[3].innerHTML="مرة ";
+					}
 			}function cmpNumbre5(){
 					let element = document.getElementById('numbre5');
 					let value = element.innerHTML;	
@@ -476,7 +505,27 @@
 					let ele = document.getElementsByClassName("intro_table_hover");
 					ele[4].style.backgroundImage="url('img/table-2S.jpg')";
 					}
+					if (value>=2 && value<=10){
+						document.getElementsByClassName('Marra')[4].innerHTML="مرات";
+					}else{
+						document.getElementsByClassName('Marra')[4].innerHTML="مرة ";
+					}
+			}function cmpNumbre6(){
+					let element = document.getElementById('numbre6');
+					let value = element.innerHTML;	
+					++value;	
+					document.getElementById('numbre6').innerHTML=value;
+					if (value>= 100){
+					let ele = document.getElementsByClassName("intro_table_hover");
+					ele[5].style.backgroundImage="url('img/table-2S.jpg')";
+					}
+					if (value>=2 && value<=10){
+						document.getElementsByClassName('Marra')[5].innerHTML="مرات";
+					}else{
+						document.getElementsByClassName('Marra')[5].innerHTML="مرة ";
+					}
 			}
+
 
 
 
