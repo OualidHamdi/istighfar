@@ -1,11 +1,14 @@
-
+@font-face{
+  font-family: CairoPlay;
+  src : url(../fonts/CairoPlay-Bold.ttf);
+}
 .team-boxed p {
   color:#7d8285;
 }
 
 .team-boxed h2 {
   font-weight:bold;
-
+font-family: CairoPlay;
   color:inherit;
 }
 
@@ -36,15 +39,15 @@
 .team-boxed .item .box {
   text-align:center;
   padding:30px;
-  background-color:#fff;
   margin-bottom:30px;
+  border: 3px solid #de9b72;
 }
 
 .team-boxed .item .name {
   font-weight:bold;
   margin-top:28px;
   margin-bottom:8px;
-  color:inherit;
+  color:#de9b72;
 }
 
 .team-boxed .item .title {
@@ -63,6 +66,7 @@
 
 .team-boxed .item img {
   max-width:160px;
+  border: 2px solid #de9b72;
 }
 
 .team-boxed .social {
@@ -79,4 +83,8 @@
 
 .team-boxed .social a:hover {
   opacity:1;
+  }
+
+  .team-boxed  {
+  padding: 7% 0 ;
   }
