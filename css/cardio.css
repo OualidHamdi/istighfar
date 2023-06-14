@@ -269,10 +269,6 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 	position: relative;
 	z-index: 1;
 }
-/* Sections */
-section {
-	position: relative;
-}
 
 .section {
 	padding: 40px 0;
